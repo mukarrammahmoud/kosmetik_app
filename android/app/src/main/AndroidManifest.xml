@@ -124,7 +124,7 @@
     <uses-feature android:name="android.hardware.sensor.compass" android:required="false" />
 
     <application
-        android:label="flutter_application_1"
+        android:label="عالم التجميل الاجراحي برستج"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

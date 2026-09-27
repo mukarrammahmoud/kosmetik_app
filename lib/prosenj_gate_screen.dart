@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'welcome_screen.dart';
 
 class ProsenjGateScreen extends StatelessWidget {
@@ -15,7 +16,6 @@ class ProsenjGateScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     const rose = Color(0xFFD81B60);
-    const gold = Color(0xFFFB8C00);
 
     return Directionality(
       textDirection: TextDirection.rtl,
@@ -37,16 +37,47 @@ class ProsenjGateScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: SingleChildScrollView(
-                    padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 24.0,
+                      vertical: 24.0,
+                    ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const SizedBox(height: 16),
-                        _buildCrest(rose, gold),
+                        Container(
+                          width: 190,
+                          height: 190,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(36),
+                            boxShadow: [
+                              BoxShadow(
+                                color: rose.withValues(alpha: 0.28),
+                                blurRadius: 30,
+                                offset: const Offset(0, 12),
+                              ),
+                            ],
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(36),
+                            child: Image.asset(
+                              'lib/images/logo.png',
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                              height: double.infinity,
+                              errorBuilder: (context, error, stackTrace) =>
+                                  const Icon(
+                                    Icons.spa_rounded,
+                                    size: 64,
+                                    color: Color(0xFFD81B60),
+                                  ),
+                            ),
+                          ),
+                        ),
                         const SizedBox(height: 28),
 
                         Text(
-                          'للدخول الى عالم التجميل الاجراحي برسنج اضغط نعم',
+                          'للدخول الى عالم التجميل الاجراحي برستج اضغط نعم',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 22,
@@ -71,8 +102,18 @@ class ProsenjGateScreen extends StatelessWidget {
                           runSpacing: 8,
                           alignment: WrapAlignment.center,
                           children: [
-                            _buildChip(context, Icons.verified_rounded, 'الأذونات مفعّلة', Colors.green),
-                            _buildChip(context, Icons.auto_awesome_rounded, 'تجربة كاملة', rose),
+                            _buildChip(
+                              context,
+                              Icons.verified_rounded,
+                              'الأذونات مفعّلة',
+                              Colors.green,
+                            ),
+                            _buildChip(
+                              context,
+                              Icons.auto_awesome_rounded,
+                              'تجربة كاملة',
+                              rose,
+                            ),
                           ],
                         ),
                         const SizedBox(height: 16),
@@ -97,7 +138,10 @@ class ProsenjGateScreen extends StatelessWidget {
                           ),
                           child: const Text(
                             'نعم',
-                            style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           onPressed: () {
                             Navigator.of(context).pushReplacement(
@@ -123,7 +167,10 @@ class ProsenjGateScreen extends StatelessWidget {
                           ),
                           child: const Text(
                             'لا',
-                            style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           onPressed: () => Navigator.of(context).pop(),
                         ),
@@ -139,47 +186,12 @@ class ProsenjGateScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildCrest(Color rose, Color gold) {
-    return Container(
-      width: 150,
-      height: 150,
-      padding: const EdgeInsets.all(6),
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        gradient: LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          colors: [rose, gold],
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: rose.withValues(alpha: 0.32),
-            blurRadius: 26,
-            offset: const Offset(0, 10),
-          ),
-        ],
-      ),
-      child: ClipOval(
-        child: Container(
-          color: Colors.white,
-          padding: const EdgeInsets.all(8),
-          child: Image.asset(
-            'images/logo.png',
-            fit: BoxFit.contain,
-            width: double.infinity,
-            height: double.infinity,
-            errorBuilder: (context, error, stackTrace) => const Icon(
-              Icons.spa_rounded,
-              size: 54,
-              color: Color(0xFFD81B60),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildChip(BuildContext context, IconData icon, String label, Color color) {
+  Widget _buildChip(
+    BuildContext context,
+    IconData icon,
+    String label,
+    Color color,
+  ) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
       decoration: BoxDecoration(
@@ -194,7 +206,11 @@ class ProsenjGateScreen extends StatelessWidget {
           const SizedBox(width: 6),
           Text(
             label,
-            style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold, color: color),
+            style: TextStyle(
+              fontSize: 12.5,
+              fontWeight: FontWeight.bold,
+              color: color,
+            ),
           ),
         ],
       ),
