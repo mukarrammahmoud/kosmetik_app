@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- أذونات الموقع -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول إلى موقعك لتقديم خدمات مبنية على الموقع الجغرافي.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول المستمر إلى موقعك للتتبع والتنبيهات في الخلفية.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول الدائم إلى الموقع لمراقبة الموقع الجغرافي.</string>
+
+	<!-- الميكروفون والصوت -->
+	<key>NSMicrophoneUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول إلى الميكروفون للتسجيل الصوتي والتعرف على الصوت.</string>
+
+	<!-- الكاميرا -->
+	<key>NSCameraUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول إلى الكاميرا لالتقاط الصور وتسجيل الفيديو.</string>
+
+	<!-- مكتبة الصور والوسائط -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول إلى مكتبة الصور لاختيار الصور والفيديو وتحميلها.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>يتطلب هذا التطبيق إذناً لحفظ الصور والفيديو في مكتبة الصور.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول إلى Apple Music ومكتبة الوسائط الصوتية.</string>
+
+	<!-- جهات الاتصال -->
+	<key>NSContactsUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول إلى جهات اتصالك للتواصل مع الأصدقاء ودعوة الآخرين.</string>
+
+	<!-- التقويم -->
+	<key>NSCalendarsUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول إلى تقويمك لجدولة الفعاليات وعرضها.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>يتطلب هذا التطبيق وصولاً كاملاً إلى تقويمك لإنشاء الفعاليات وتعديلها.</string>
+	<key>NSCalendarsWriteOnlyUsageDescription</key>
+	<string>يتطلب هذا التطبيق إذن الكتابة لإضافة فعاليات إلى تقويمك.</string>
+
+	<!-- التذكيرات -->
+	<key>NSRemindersUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول إلى التذكيرات لإشعارك بالمهام المخططة.</string>
+	<key>NSRemindersFullAccessUsageDescription</key>
+	<string>يتطلب هذا التطبيق وصولاً كاملاً لإنشاء التذكيرات وإدارتها.</string>
+
+	<!-- البلوتوث -->
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول المستمر للبلوتوث لاكتشاف الأجهزة القريبة والاتصال بها.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول للبلوتوث للتواصل مع الأجهزة الطرفية.</string>
+
+	<!-- المستشعرات والحركة -->
+	<key>NSMotionUsageDescription</key>
+	<string>يتطلب هذا التطبيق الوصول إلى مستشعر الحركة لحساب الخطوات والكشف عن النشاط البدني.</string>
+
+	<!-- التعرف على الكلام -->
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>يتطلب هذا التطبيق التعرف على الكلام لنسخ الأوامر الصوتية المنطوقة.</string>
+
+	<!-- تتبع التطبيق و Face ID -->
+	<key>NSUserTrackingUsageDescription</key>
+	<string>يستخدم هذا التطبيق بيانات التتبع لتخصيص تجربتك وتقديم محتوى ملائم لاهتماماتك.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>يستخدم هذا التطبيق Face ID للمصادقة البيومترية وحماية حسابك.</string>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Flutter Application 1</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>flutter_application_1</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneClassName</key>
+					<string>UIWindowScene</string>
+					<key>UISceneConfigurationName</key>
+					<string>flutter</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Main</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+</dict>
+</plist>
