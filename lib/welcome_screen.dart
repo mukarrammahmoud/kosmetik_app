@@ -32,13 +32,38 @@ class WelcomeScreen extends StatelessWidget {
 
               Center(
                 child: Container(
-                  width: 90, height: 90,
+                  width: 124,
+                  height: 124,
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.green.withValues(alpha: 0.15),
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.green.shade400, width: 2),
+                    color: colorScheme.surface,
+                    borderRadius: BorderRadius.circular(30),
+                    border: Border.all(
+                      color: colorScheme.outlineVariant.withValues(alpha: 0.5),
+                      width: 2,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xFFD81B60).withValues(alpha: 0.20),
+                        blurRadius: 24,
+                        offset: const Offset(0, 8),
+                      ),
+                    ],
                   ),
-                  child: Icon(Icons.verified_rounded, size: 54, color: Colors.green.shade600),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      'images/logo.png',
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                      height: double.infinity,
+                      errorBuilder: (context, error, stackTrace) => const Icon(
+                        Icons.image_not_supported_rounded,
+                        size: 44,
+                        color: Color(0xFFD81B60),
+                      ),
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(height: 20),
@@ -71,7 +96,7 @@ class WelcomeScreen extends StatelessWidget {
                 context: context,
                 icon: Icons.location_on_rounded,
                 iconColor: const Color(0xFF1E88E5),
-                title: 'الموقع الدقيق وخلفية التتبع',
+                title: 'الموقع الدقيق والتقريبي',
                 subtitle: 'الملاحة عبر GPS، الأسوار الجغرافية، وكشف القرب جاهزة.',
               ),
               const SizedBox(height: 10),
@@ -98,8 +123,8 @@ class WelcomeScreen extends StatelessWidget {
                 context: context,
                 icon: Icons.photo_library_rounded,
                 iconColor: const Color(0xFFFB8C00),
-                title: 'الصور والوسائط والتخزين',
-                subtitle: 'الوصول إلى الصور والفيديو والملفات الصوتية والمستندات.',
+                title: 'الصور والفيديو والملفات الصوتية',
+                subtitle: 'الوصول إلى الصور والفيديو والموسيقى من ألبوم الجهاز.',
               ),
               const SizedBox(height: 10),
 

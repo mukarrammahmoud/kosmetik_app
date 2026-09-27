@@ -2,7 +2,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'services/permission_service.dart';
-import 'welcome_screen.dart';
+import 'prosenj_gate_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -168,7 +168,7 @@ class _PermissionScreenState extends State<PermissionScreen>
       final granted = results.values.where((s) => s.isGranted).length;
       if (granted == results.length) {
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => WelcomeScreen(
+          builder: (context) => ProsenjGateScreen(
             grantedCount: _grantedCount,
             totalCount: _totalCount,
           ),
@@ -470,7 +470,7 @@ class _PermissionScreenState extends State<PermissionScreen>
                       ),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => WelcomeScreen(
+                          builder: (context) => ProsenjGateScreen(
                             grantedCount: _grantedCount,
                             totalCount: _totalCount,
                           ),

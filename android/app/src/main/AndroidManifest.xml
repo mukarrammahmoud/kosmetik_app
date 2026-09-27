@@ -15,8 +15,6 @@
     <!-- Android 12+ requires both FINE and COARSE to be declared and requested together -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- Android 10+ (API 29+) Background Location -->
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <!-- ======================================================== -->
     <!-- CAMERA & HARDWARE PERMISSIONS -->
@@ -34,10 +32,10 @@
     <!-- STORAGE & MEDIA PERMISSIONS -->
     <!-- ======================================================== -->
     <!-- Legacy storage (Android 12 and below, API <= 32) -->
+    <!-- Kept only so the scoped Photos permission resolves on Android 7-12.
+         All-Files access (MANAGE_EXTERNAL_STORAGE) is intentionally NOT requested. -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
-    <!-- Android 11+ (API 30+) All Files Access (Manage External Storage) -->
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <!-- Android 10+ (API 29+) Access Media Location (EXIF GPS) -->
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
     <!-- Android 13+ (API 33+) Granular Media Permissions -->
@@ -51,7 +49,6 @@
     <!-- NOTIFICATIONS (Android 13+ / API 33+) -->
     <!-- ======================================================== -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
     <!-- ======================================================== -->
     <!-- CONTACTS & ACCOUNTS PERMISSIONS -->
@@ -110,7 +107,6 @@
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <!-- ======================================================== -->

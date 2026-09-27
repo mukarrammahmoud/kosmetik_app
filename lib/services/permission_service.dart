@@ -84,17 +84,6 @@ class PermissionService {
       icon: Icons.location_on_rounded,
       accentColor: Color(0xFF1E88E5),
     ),
-    const AppPermissionItem(
-      id: 'location_always',
-      permission: Permission.locationAlways,
-      name: 'الموقع في الخلفية',
-      category: 'الموقع والتحديد',
-      description: 'تتبع موقع الجهاز عندما يكون التطبيق في الخلفية أو الجهاز مقفلاً.',
-      androidPermissionName: 'ACCESS_BACKGROUND_LOCATION',
-      iosUsageDescriptionKey: 'NSLocationAlwaysAndWhenInUseUsageDescription',
-      icon: Icons.wrong_location_rounded,
-      accentColor: Color(0xFF3949AB),
-    ),
 
     // ─── الوسائط والأجهزة ──────────────────────────────────────────────────
     const AppPermissionItem(
@@ -165,29 +154,6 @@ class PermissionService {
       icon: Icons.audiotrack_rounded,
       accentColor: Color(0xFF00897B),
     ),
-    const AppPermissionItem(
-      id: 'storage',
-      permission: Permission.storage,
-      name: 'التخزين الخارجي',
-      category: 'التخزين والوسائط',
-      description: 'قراءة وكتابة التخزين الخارجي المشترك على أندرويد 12 وما دون.',
-      androidPermissionName: 'READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE',
-      iosUsageDescriptionKey: 'مجلد المستندات',
-      icon: Icons.folder_shared_rounded,
-      accentColor: Color(0xFF00ACC1),
-    ),
-    const AppPermissionItem(
-      id: 'manage_storage',
-      permission: Permission.manageExternalStorage,
-      name: 'الوصول لجميع الملفات',
-      category: 'التخزين والوسائط',
-      description: 'وصول شامل لجميع التخزين المشترك على أندرويد 11+ (API 30+).',
-      androidPermissionName: 'MANAGE_EXTERNAL_STORAGE',
-      iosUsageDescriptionKey: 'غير متاح على iOS',
-      icon: Icons.drive_file_move_rounded,
-      accentColor: Color(0xFFF4511E),
-      isSpecialPermission: true,
-    ),
 
     // ─── المعلومات الشخصية ─────────────────────────────────────────────────
     const AppPermissionItem(
@@ -222,17 +188,6 @@ class PermissionService {
       iosUsageDescriptionKey: 'NSRemindersFullAccessUsageDescription',
       icon: Icons.event_note_rounded,
       accentColor: Color(0xFF039BE5),
-    ),
-    const AppPermissionItem(
-      id: 'app_tracking',
-      permission: Permission.appTrackingTransparency,
-      name: 'تتبع التطبيق (ATT)',
-      category: 'المعلومات الشخصية',
-      description: 'السماح بالتتبع عبر التطبيقات لتقديم تجارب مخصصة وتحليلات.',
-      androidPermissionName: 'AD_ID (Google Play Services)',
-      iosUsageDescriptionKey: 'NSUserTrackingUsageDescription',
-      icon: Icons.privacy_tip_rounded,
-      accentColor: Color(0xFF546E7A),
     ),
 
     // ─── الاتصالات والتنبيهات ──────────────────────────────────────────────
@@ -354,18 +309,6 @@ class PermissionService {
       isSpecialPermission: true,
     ),
     const AppPermissionItem(
-      id: 'battery_optimization',
-      permission: Permission.ignoreBatteryOptimizations,
-      name: 'تجاهل تحسين البطارية',
-      category: 'النظام والمتقدم',
-      description: 'إعفاء التطبيق من قيود السكون الصارمة في الخلفية.',
-      androidPermissionName: 'REQUEST_IGNORE_BATTERY_OPTIMIZATIONS',
-      iosUsageDescriptionKey: 'معالجة الخلفية',
-      icon: Icons.battery_saver_rounded,
-      accentColor: Color(0xFF2E7D32),
-      isSpecialPermission: true,
-    ),
-    const AppPermissionItem(
       id: 'schedule_exact_alarm',
       permission: Permission.scheduleExactAlarm,
       name: 'جدولة تنبيهات دقيقة',
@@ -375,18 +318,6 @@ class PermissionService {
       iosUsageDescriptionKey: 'الإشعارات المحلية',
       icon: Icons.alarm_on_rounded,
       accentColor: Color(0xFFD84315),
-    ),
-    const AppPermissionItem(
-      id: 'notification_policy',
-      permission: Permission.accessNotificationPolicy,
-      name: 'وضع عدم الإزعاج (DND)',
-      category: 'النظام والمتقدم',
-      description: 'قراءة وضبط وضع عدم الإزعاج وأولوية الإشعارات في النظام.',
-      androidPermissionName: 'ACCESS_NOTIFICATION_POLICY',
-      iosUsageDescriptionKey: 'غير متاح على iOS',
-      icon: Icons.do_not_disturb_on_rounded,
-      accentColor: Color(0xFFC2185B),
-      isSpecialPermission: true,
     ),
     const AppPermissionItem(
       id: 'install_packages',
